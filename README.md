@@ -9,11 +9,31 @@
 - belongs_to :group
 - belongs_to :user
 
-## groupteテーブル
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, default:|
+
+### Association
+- 
+- 
+-
+
+## userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+
+### Association
+- 
+- 
+-
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
 
 ### Association
 - 
