@@ -1,4 +1,4 @@
-## groups_usersテーブル
+## groups_users table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -9,28 +9,30 @@
 - belongs_to :group
 - belongs_to :user
 
-## groupテーブル
+## group table
 
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false, default:|
-
-### Association
-- 
-- 
--
-
-## userテーブル
-
-|Column|Type|Options|
-|------|----|-------|
+|Column|Type  |Options|
+|------|----  |-------|
+|name  |string|null: false, default:|
 
 ### Association
 - 
 - 
 -
 
-## commentsテーブル
+## users table
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|index:true,null:false,unique:true|
+|mail|string|null:false|
+
+### Association
+- 
+- 
+-
+
+## comments table
 
 |Column|Type|Options|
 |------|----|-------|
