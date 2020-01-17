@@ -28,9 +28,9 @@
 |mail|string|null:false|
 
 ### Association
-- 
-- 
--
+- has_many:groups,through:members
+- has_many:comments
+- has_many:members
 
 ## comments table
 
