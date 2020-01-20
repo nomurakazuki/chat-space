@@ -1,43 +1,48 @@
-## groups_users table
+## group_users table
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null:false,foreign_key:true|
+|group_id|integer|null:false,foreign_key:true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
-## group table
+## groups table
 
-|Column|Type  |Options|
-|------|----  |-------|
-|name  |string|null: false, default:|
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false,default:|
 
 ### Association
-- 
-- 
--
+- has_many:comments
+- has_many:users,through:group_users
+- has_many:group_users
 
 ## users table
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index:true,null:false,unique:true|
-|mail|string|null:false|
+|name|string|null:false,default:|
+|email|string|null:false,default:|
 
 ### Association
-- has_many:groups,through:members
 - has_many:comments
-- has_many:members
+- add_index:users,:name,unique:ture
+- add_index:users,:email,unique:ture
+- has_many:groups,through::group_users
+- has_many:group_users
 
 ## comments table
 
 |Column|Type|Options|
 |------|----|-------|
+|body|text|  |
+|image|string|   |
+|user_id|integer|null:false,foreign_key:true,index:true|
+|group_id|integer|null:false,foreign_key:true,index:true|
 
 ### Association
-- 
-- 
--
+- belongs_to:user
+- belongs_to:group
