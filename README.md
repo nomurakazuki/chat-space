@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null:false,foreign_key:true|
-|group_id|integer|null:false,foreign_key:true|
+|user|references|null:false,foreign_key:true|
+|group|references|null:false,foreign_key:true|
 
 ### Association
 - belongs_to :group
@@ -40,8 +40,8 @@
 |------|----|-------|
 |body|text| |
 |image|string| |
-|user_id|integer|null:false,foreign_key:true,index:true|
-|group_id|integer|null:false,foreign_key:true,index:true|
+|user|references|null:false,foreign_key:true,index:true|
+|group|references|null:false,foreign_key:true,index:true|
 
 ### Association
 - belongs_to:user
