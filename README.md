@@ -16,7 +16,7 @@
 |name|string|null: false,default:|
 
 ### Association
-- has_many:comments
+- has_many:messages
 - has_many:users,through:group_users
 - has_many:group_users
 
@@ -28,18 +28,18 @@
 |email|string|null:false,default:|
 
 ### Association
-- has_many:comments
+- has_many:messages
 - add_index:users,:name,unique:ture
 - add_index:users,:email,unique:ture
 - has_many:groups,through::group_users
 - has_many:group_users
 
-## comments table
+## messages table
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|  |
-|image|string|   |
+|body|text| |
+|image|string| |
 |user_id|integer|null:false,foreign_key:true,index:true|
 |group_id|integer|null:false,foreign_key:true,index:true|
 
